@@ -1,209 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Computer Graphics</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Assignment Showcase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* สีพื้นหลังเว็บ */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .showcase-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* เงากรอบแบบเบาๆ */
+            max-width: 800px;
+            width: 100%;
+        }
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db; /* แถบสีฟ้าด้านซ้าย */
+            padding-left: 12px;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+            font-size: 1.2em;
+        }
+        p {
+            line-height: 1.6;
+            color: #444;
+        }
+        .iframe-container {
+            margin-top: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        iframe {
+            width: 520px; /* ขนาดให้พอดีกับ Canvas 500px + เผื่อขอบ */
+            height: 520px;
+            border: none; 
+        }
+    </style>
 </head>
 <body>
-
-<header>
-    <h1>Interactive Computer Graphics</h1>
-    <p>
-        HTML5 Canvas • JavaScript • Raster Graphics
-    </p>
-</header>
-
-<section>
-
-    <h2>Project Overview</h2>
-
-    <p>
-        This project demonstrates an interactive raster graphics
-        application developed using HTML5 Canvas and JavaScript.
-        Users can draw graphics and manipulate sprites through
-        keyboard and mouse interaction.
-    </p>
-
-</section>
-
-<section>
-
-<h2>Project Features</h2>
-
-<div class="card">
-
-<ul>
-
-<li>✔ Pixel Drawing</li>
-
-<li>✔ Draw Line</li>
-
-<li>✔ Draw Rectangle</li>
-
-<li>✔ Filled Rectangle</li>
-
-<li>✔ Gradient Rectangle</li>
-
-<li>✔ Draw Ellipse</li>
-
-<li>✔ Sprite Rendering</li>
-
-<li>✔ Sprite Rotation</li>
-
-<li>✔ Sprite Scaling</li>
-
-<li>✔ 24-bit Sprite</li>
-
-<li>✔ Mouse Interaction</li>
-
-<li>✔ Keyboard Interaction</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Keyboard Controls</h2>
-
-<table>
-
-<tr>
-<th>Key</th>
-<th>Function</th>
-</tr>
-
-<tr>
-<td>1</td>
-<td>Red Color</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>Green Color</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>Blue Color</td>
-</tr>
-
-<tr>
-<td>←</td>
-<td>Rotate Left</td>
-</tr>
-
-<tr>
-<td>→</td>
-<td>Rotate Right</td>
-</tr>
-
-<tr>
-<td>↑</td>
-<td>Scale Up</td>
-</tr>
-
-<tr>
-<td>↓</td>
-<td>Scale Down</td>
-</tr>
-
-</table>
-
-</section>
-
-<section>
-
-<h2>Mouse Interaction</h2>
-
-<p>
-
-• Click and drag to draw on the canvas.
-
-</p>
-
-<p>
-
-• Move the mouse to change sprite position.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Technologies</h2>
-
-<div class="card">
-
-<p>HTML5</p>
-
-<p>CSS3</p>
-
-<p>JavaScript</p>
-
-<p>Canvas API</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Live Demo</h2>
-
-<p>
-Click the button below to open the interactive graphics project.
-</p>
-
-<a class="button" href="800_interactional(4).html">
-
-Open Interactive Graphics
-
-</a>
-
-</section>
-
-<section>
-
-<h2>Learning Outcomes</h2>
-
-<ul>
-
-<li>Implemented raster graphics algorithms.</li>
-
-<li>Developed an interactive graphics application.</li>
-
-<li>Applied Translation, Rotation and Scaling transformations.</li>
-
-<li>Created a 24-bit sprite rendering system.</li>
-
-<li>Implemented keyboard and mouse interaction.</li>
-
-</ul>
-
-</section>
-
-<footer>
-
-<p>
-
-Interactive Computer Graphics Project
-
-</p>
-
-<p>
-
-Developed using HTML5 Canvas & JavaScript
-
-</p>
-
-</footer>
-
+    <div class="showcase-card">
+        <h2>🎨 Portfolio Showcase</h2>
+        
+        <h3>โปรเจกต์: Interactive Raster Graphics</h3>
+        
+        <p>นี่คือผลงานการสร้างระบบวาดภาพและเรนเดอร์กราฟิกแบบ Raster (พิกเซล) ด้วย JavaScript บริสุทธิ์บน HTML Canvas โดยไม่ได้ใช้ไลบรารีภายนอก ภายในโปรเจกต์ประกอบด้วยระบบการวาดเส้น, การลงสี, และการแสดงผล Sprite (รูปดอกไม้) ที่สามารถหมุนและซูมได้</p>
+        
+        <p><strong>วิธีเล่น:</strong> ลองใช้เมาส์คลิกลากเพื่อวาดเส้น หรือใช้ ปุ่มลูกศร บนคีย์บอร์ดเพื่อหมุนและซูมดอกไม้ (กดเลข 1, 2, 3 เพื่อเปลี่ยนสีเส้น)</p>
+        
+        <div class="iframe-container">
+            <!-- ดึงไฟล์ 800_interactional.html มาแสดงตรงนี้ -->
+            <iframe src="800_interactional.html" title="Raster Graphics Showcase" scrolling="no"></iframe>
+        </div>
+    </div>
 </body>
 </html>
